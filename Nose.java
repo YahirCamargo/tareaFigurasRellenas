@@ -326,6 +326,7 @@ private ControlFiguras cf= new ControlFiguras();
         }
         
         
+    try {
         cf.dibujarFigura((Graphics2D)lienzo.getGraphics(),
                 figuraSeleccionada,
                 opcionColor,
@@ -335,6 +336,9 @@ private ControlFiguras cf= new ControlFiguras();
                 lineaPunteada,
                 centroX,
                 centroY);
+    } catch (IOException ex) {
+        Logger.getLogger(Nose.class.getName()).log(Level.SEVERE, null, ex);
+    }
     
     }//GEN-LAST:event_jButton1ActionPerformed
 

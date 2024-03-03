@@ -20,24 +20,7 @@ public class ControlFiguras {
 
     private Ellipse2D circulo;
     private Rectangle2D cuadrado;
-    
-    private TexturePaint globalTexture;
 
-    public void dibujarCirculo(Graphics2D g, Color color) {
-        circulo = new Ellipse2D.Double(100, 70, 20, 20);
-        g.setPaint(color);
-        g.fill(circulo);
-    }
-
-    public void dibujarCuadrado(Graphics2D g, Color color) {
-        cuadrado = new Rectangle2D.Double(100, 70, 20, 20);
-        g.setPaint(color);
-        g.fill(cuadrado);
-    }
-
-    public void dibujarCilindro() {
-
-    }
 
     public void refrescarfigura(Graphics2D g) {
         Graphics2D g2d = (Graphics2D) g;
@@ -70,11 +53,13 @@ public class ControlFiguras {
                         g2d.setColor(color);
                         g2d.fillRect(150 - (tamano / 2), 100 - (tamano / 2), tamano, tamano);
                         break;
+                        
                     case 2:
                         g2d.setPaint(new GradientPaint(150 - (tamano / 2), 100 - (tamano / 2), Color.RED, tamano, tamano,
                                 color, true));
                         g2d.fill(new Rectangle.Double(150 - (tamano / 2), 100 - (tamano / 2), tamano, tamano));
                         break;
+                        
                     default:
                         g2d.setPaint(texturaPerro);
                         g2d.fill(new Rectangle.Double(150 - (tamano / 2), 100 - (tamano / 2), tamano, tamano));
@@ -97,6 +82,7 @@ public class ControlFiguras {
                         g2d.setColor(color);
                         g2d.fillOval(150 - (tamano / 2), 100 - (tamano / 2), tamano, tamano);
                         break;
+                        
                     case 2:
                         g2d.setPaint(new GradientPaint(150 - (tamano / 2), 100 - (tamano / 2), Color.RED, tamano, tamano,
                                 color, true));
@@ -126,6 +112,7 @@ public class ControlFiguras {
                         g2d.drawOval(centroX - (tamano / 4), (int) (centroY - (tamano / 1.5)), tamano / 2, tamano / 4);
                         g2d.drawOval(centroX - (tamano / 4), (int) (centroY + (tamano / 2.25)), tamano / 2, tamano / 4);
                         break;
+                        
                     case 2:
                         g2d.setPaint(new GradientPaint(centroX - (tamano / 4), centroY - (tamano / 2), Color.RED, tamano, tamano,
                                 color, true));
@@ -143,8 +130,6 @@ public class ControlFiguras {
                         break;
 
                     default:
-                        
-                        
                         g2d.setPaint(texturaPerro);
                         g2d.fillRect(centroX - (tamano / 4), centroY - (tamano / 2), tamano / 2, tamano);
                         g2d.setColor(Color.BLACK);
@@ -161,5 +146,4 @@ public class ControlFiguras {
             }
         }
     }
-
 }
